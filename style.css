@@ -103,10 +103,16 @@ body {
     padding: .6rem 2rem;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .btn-white {
     background:  #FFF;
+}
+
+.btn-main {
+    color:  #FFF;
+    background: var(--color-main);
 }
 
 .btn i {
@@ -249,7 +255,7 @@ header label {
 
 .analytics {
     display: grid;
-    grid-template-columns: 70% auto;
+    grid-template-columns: 65% auto;
     grid-gap: 2rem;
     margin-top: 2rem;
 }
@@ -258,14 +264,177 @@ header label {
     background: #FFF;
     border-radius: 10px;
     box-shadow: var(--shadow);
-    padding: 1rem;
 }
 
 .card-head {
     font-size: 1.1rem;
     color: #555;
     font-weight: 600;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #EEE;
 }
+
+.card-body {
+    padding: 1.5rem 2rem;
+}
+
+.card-footer {
+    padding: 1rem 2rem;
+}
+
+.emails-card .card-body {
+    padding: .3rem;
+}
+
+.chart-wrapper {
+    padding-top: 1rem 0rem;
+}
+
+.emails-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.bg-success {
+    background: var(--success);
+    color: #FFF;
+}
+
+.bg-danger {
+    background: var(--danger);
+    color: #FFF;
+}
+
+.bg-warning {
+    background: var(--color-secondary);
+    color: #FFF;
+}
+
+.email-stat {
+    display: flex;
+    align-items: center;
+}
+
+.email-stat span {
+    display: inline-block;
+}
+
+.email-stat .status {
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    border-radius: 50px;
+    margin-right: .5rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr {
+    border-bottom: 1px solid #EFEFEF;
+}
+
+table tr td,
+table tr th {
+    padding: 1rem;
+}
+
+table tr th {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+table small {
+    font-weight: 600;
+}
+
+table h4,
+table h3 {
+    color: #333;
+    margin-bottom: .3rem;
+}
+
+.grid-2 {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 65% auto;
+    grid-gap: 2rem;
+}
+
+.team-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team-head select {
+    display: inline-block;
+    height: 38px;
+    padding:  .5rem 2rem;
+    border-radius: 8px;
+    background: #EFEFEF;
+    border:  none;
+    outline: none;
+}
+
+.team-info {
+    display: flex;
+    align-items: center;
+}
+
+.team-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    background: var(--bg-body);
+    margin-right: .7rem;
+    padding: .8rem;
+}
+
+.team-progress h4 {
+    color: var(--main-text);
+}
+
+.progress-bar {
+    width: 100%;
+    background: #EFEFEF;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
