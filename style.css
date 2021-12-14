@@ -23,10 +23,23 @@
 body {
     color: var(--main-text);
     background: var(--bg-body);
+    overflow-x: hidden;
 }
 
 #menu-toggle {
     display: none;
+}
+
+#menu-toggle:checked ~ .sidebar {
+    display: none;
+}
+
+#menu-toggle:checked .main-content .engage-card {
+    max-width: 698px;
+}
+
+#menu-toggle:checked .main-content .emails-card {
+    max-width: 344px;
 }
 
 .page-wrapper {
@@ -37,6 +50,7 @@ body {
 .page-wrapper::before {
     content: "";
     width: 100%;
+    max-width: 100%;
     height: 430px;
     position: absolute;
     left: 0;
@@ -198,7 +212,6 @@ body {
 .main-content {
     padding: 0 40px;
     flex: 1;
-
 }
 
 header {
@@ -282,6 +295,11 @@ header label {
     padding: 1rem 2rem;
 }
 
+.engage-card,
+.emails-card {
+    min-width: 100%;
+}
+
 .emails-card .card-body {
     padding: .3rem;
 }
@@ -343,9 +361,13 @@ table tr {
     border-bottom: 1px solid #EFEFEF;
 }
 
+table tr:last-child {
+    border-bottom: none;
+}
+
 table tr td,
 table tr th {
-    padding: 1rem;
+    padding: 1.2rem 1rem;
 }
 
 table tr th {
@@ -359,7 +381,9 @@ table small {
 }
 
 table h4,
-table h3 {
+table h3,
+.competitors .card-body h3,
+.competitors .card-body h4 {
     color: #333;
     margin-bottom: .3rem;
 }
@@ -369,12 +393,18 @@ table h3 {
     display: grid;
     grid-template-columns: 65% auto;
     grid-gap: 2rem;
+    margin-bottom: 3.5rem;
 }
 
 .team-head {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.team-head small {
+    color: var(--main-text);
+    font-weight: 600;
 }
 
 .team-head select {
@@ -401,8 +431,9 @@ table h3 {
     padding: .8rem;
 }
 
-.team-progress h4 {
+.team-progress > h4 {
     color: var(--main-text);
+    margin-bottom: .5rem;
 }
 
 .progress-bar {
@@ -410,9 +441,106 @@ table h3 {
     background: #EFEFEF;
     position: relative;
     border-radius: 10px;
+    height: 15px;
 }
 
+.indicator {
+    height: 100%;
+    border-radius: 10px;
+}
 
+.indicator.success {
+    background: var(--success);
+}
+
+.indicator.danger {
+    background: var(--danger);
+}
+
+.indicator.info {
+    background: var(--color-main);
+}
+
+.indicator.warning {
+    background: var(--color-secondary);
+}
+
+.compete-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.3rem;
+}
+
+.compete-info > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: .7rem;
+}
+
+.compete-info img {
+    width: 100px;
+    height: 80px;
+    background: var(--bg-body);
+    border-radius: 10px;
+    margin-right: .7rem;
+}
+
+.competitors .card-body {
+    padding: 1rem;
+}
+
+.compete-details small {
+    display: inline-block;
+    margin-bottom: .3rem;
+}
+
+.compete-details p > a {
+    color: var(--color-main);
+    font-weight: 600;
+}
+
+.compete-sales {
+    text-align: right;
+}
+
+.compete-sales span {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.compete-sales h3 {
+    color: #444 !important;
+    font-size: 1.04rem !important;
+}
+
+@media only screen and (max-width: 1280px) {
+    .sidebar {
+        display: none;
+    }
+
+    #menu-toggle:checked ~ .sidebar {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .main-content {
+        padding: 0 20px;
+        flex: 1;
+    }
+
+    .analytics, .grid-2 {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .page-wrapper::before {
+        min-width: 640px;
+    }
+}
 
 
 
