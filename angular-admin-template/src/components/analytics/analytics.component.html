@@ -1,0 +1,52 @@
+<div class="analytics">
+    <div class="card engage-card">
+        <div class="card-head">
+            Engagement
+        </div>
+        <div class="card-body">
+            <div class="chart-wrapper">
+                <div id="chart">
+                    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                        [dataLabels]="chartOptions.dataLabels" [fill]="chartOptions.fill"
+                        [labels]="chartOptions.labels">
+                    </apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card emails-card">
+        <div class="card-head">
+            Emails sent
+        </div>
+        <div class="card-body">
+            <div class="chart-wrapper">
+                <div id="emailChart">
+                    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                        [dataLabels]="chartOptions.dataLabels" [fill]="chartOptions.fill"
+                        [labels]="chartOptions.labels">
+                    </apx-chart>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="emails-info">
+                    <div class="email-stat">
+                        <span class="status bg-danger"></span>
+                        <span>30 not sent</span>
+                    </div>
+                    <div class="email-stat">
+                        <span class="status bg-warning"></span>
+                        <span>38 opened</span>
+                    </div>
+                    <div class="email-stat">
+                        <span class="status bg-success"></span>
+                        <span>68 success</span>
+                    </div>
+                    <div class="email-stat">
+                        <span class="status bg-danger"></span>
+                        <span>SMTP error</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

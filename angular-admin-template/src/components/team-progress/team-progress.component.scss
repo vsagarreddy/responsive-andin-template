@@ -1,0 +1,40 @@
+.team-progress {
+  > h4 {
+    color: var(--main-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .team-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    small {
+      color: var(--main-text);
+      font-weight: 600;
+    }
+    select {
+      display: inline-block;
+      height: 38px;
+      padding: 0.5rem 2rem;
+      border-radius: 8px;
+      background: #efefef;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .team-info {
+    display: flex;
+    align-items: center;
+    .team-img {
+      height: 70px;
+      width: 110px;
+      border-radius: 8px;
+      background: var(--bg-body);
+      margin-right: 0.7rem;
+      // padding: 0.8rem;
+      display: inherit;
+      overflow: overlay;
+    }
+  }
+}

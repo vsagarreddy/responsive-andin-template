@@ -1,0 +1,52 @@
+.analytics {
+  display: grid;
+  grid-template-columns: 65% auto;
+  grid-gap: 2rem;
+  margin-top: 2rem;
+
+  .engage-card,
+  .emails-card {
+    min-width: 100%;
+  }
+
+  .emails-card {
+    .card-body {
+      padding: 0.3rem;
+    }
+    .emails-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      padding-bottom: 2rem;
+      .email-stat {
+        display: flex;
+        align-items: center;
+        span {
+          display: inline-block;
+        }
+        .status {
+          height: 15px;
+          width: 15px;
+          display: inline-block;
+          border-radius: 50px;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.bg-success {
+  background: var(--success);
+  color: #fff;
+}
+
+.bg-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.bg-warning {
+  background: var(--color-secondary);
+  color: #fff;
+}

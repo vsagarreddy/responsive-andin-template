@@ -1,0 +1,46 @@
+.competitors {
+  .card-body {
+    padding: 1rem;
+
+    .compete-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.3rem;
+      > div:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 0.7rem;
+      }
+      img {
+        width: 100px;
+        height: 80px;
+        background: var(--bg-body);
+        border-radius: 10px;
+        margin-right: 0.7rem;
+      }
+      .compete-details {
+        small {
+          display: inline-block;
+          margin-bottom: 0.3rem;
+        }
+        p > a {
+          color: var(--color-main);
+          font-weight: 600;
+        }
+      }
+      .compete-sales {
+        text-align: right;
+        span {
+          font-size: 0.9rem;
+          font-weight: 600;
+        }
+        h3 {
+          color: #444 !important;
+          font-size: 1.04rem !important;
+        }
+      }
+    }
+  }
+}
